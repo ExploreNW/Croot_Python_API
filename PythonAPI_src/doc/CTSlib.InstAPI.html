@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module CTSlib.InstAPI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="CTSlib.html"><font color="#ffffff">CTSlib</font></a>.InstAPI</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cpythonapi_sphinx%5Cctslib%5Cinstapi.py">e:\pythonapi_sphinx\ctslib\instapi.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;2017年12月6日<br>
+&nbsp;<br>
+Python&nbsp;API&nbsp;服务<br>
+提供指令交易功能</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="CTSlib.html">CTSlib</a><br>
+<a href="CTSlib.Logger.html">CTSlib.Logger</a><br>
+<a href="CTSlib.SysUtils.html">CTSlib.SysUtils</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+<a href="queue.html">queue</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="threading.html">threading</a><br>
+<a href="traceback.html">traceback</a><br>
+</td><td width="25%" valign=top><a href="types.html">types</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#InstServer">InstServer</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgInstCreate">MsgInstCreate</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstDetailKnock">MsgQueryInstDetailKnock</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstDetailOrder">MsgQueryInstDetailOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstInfo">MsgQueryInstInfo</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstInfo_InstInfo">MsgQueryInstInfo_InstInfo</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstInfo_InstList">MsgQueryInstInfo_InstList</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstList">MsgQueryInstList</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#MsgQueryInstSumOrder">MsgQueryInstSumOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaCreateInstInfo">ParaCreateInstInfo</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaCreateInstList">ParaCreateInstList</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaInstHandle">ParaInstHandle</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaQueryInstDetailKnock">ParaQueryInstDetailKnock</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaQueryInstDetailOrder">ParaQueryInstDetailOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaQueryInstInfo">ParaQueryInstInfo</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaQueryInstList">ParaQueryInstList</a>
+</font></dt><dt><font face="helvetica, arial"><a href="CTSlib.InstAPI.html#ParaQueryInstSumOrder">ParaQueryInstSumOrder</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="InstServer">class <strong>InstServer</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>指令交易服务类<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="InstServer-__init__"><strong>__init__</strong></a>(self, ctsServer)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="InstServer-instCreate"><strong>instCreate</strong></a>(self, instInfo, instLists)</dt><dd><tt>指令创建<br>
+instInfo&nbsp;&nbsp;&nbsp;&nbsp;指令信息<br>
+instLists&nbsp;&nbsp;&nbsp;&nbsp;指令明细</tt></dd></dl>
+
+<dl><dt><a name="InstServer-instHandle"><strong>instHandle</strong></a>(self, instInfo)</dt><dd><tt>指令暂停中止恢复操作<br>
+instInfo&nbsp;&nbsp;&nbsp;&nbsp;指令信息</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onInstCreate"><strong>onInstCreate</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令创建回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onInstHandle"><strong>onInstHandle</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令暂停中止恢复操作回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onQueryInstDetailKnock"><strong>onQueryInstDetailKnock</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令成交查询回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onQueryInstDetailOrder"><strong>onQueryInstDetailOrder</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令报单明细查询回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onQueryInstInfo"><strong>onQueryInstInfo</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令明细查询回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onQueryInstList"><strong>onQueryInstList</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令列表查询回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-onQueryInstSumOrder"><strong>onQueryInstSumOrder</strong></a>(self, jsonData, msgRespond, msgHead)</dt><dd><tt>指令报单汇总查询回调方法</tt></dd></dl>
+
+<dl><dt><a name="InstServer-queryInstDetailKnock"><strong>queryInstDetailKnock</strong></a>(self, paraQueryInstDetailKnock)</dt><dd><tt>指令成交查询</tt></dd></dl>
+
+<dl><dt><a name="InstServer-queryInstDetailOrder"><strong>queryInstDetailOrder</strong></a>(self, paraQueryInstDetailOrder)</dt><dd><tt>指令报单明细</tt></dd></dl>
+
+<dl><dt><a name="InstServer-queryInstInfo"><strong>queryInstInfo</strong></a>(self, paraQueryInstInfo)</dt><dd><tt>指令明细查询</tt></dd></dl>
+
+<dl><dt><a name="InstServer-queryInstList"><strong>queryInstList</strong></a>(self, paraQueryInstList)</dt><dd><tt>指令列表查询</tt></dd></dl>
+
+<dl><dt><a name="InstServer-queryInstSumOrder"><strong>queryInstSumOrder</strong></a>(self, paraQueryInstSumOrder)</dt><dd><tt>指令报单汇总查询</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgInstCreate">class <strong>MsgInstCreate</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>successFlg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成功标志<br>
+tradeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;允许交易标志<br>
+errorCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;错误代码<br>
+failInfo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中文失败信息<br>
+englishFailInfo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英文失败信息<br>
+optFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作标志<br>
+exceptionType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;异常类型<br>
+instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+traderId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易员代码<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买卖方向<br>
+exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易市场<br>
+regId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股东代码<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+custId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客户帐号<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托数量<br>
+orderPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托价格<br>
+optId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;柜员代码<br>
+restrictMode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;限制类型<br>
+stkName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券名称<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstDetailKnock">class <strong>MsgQueryInstDetailKnock</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令代码<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买卖方向<br>
+f_offSetFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开平标志（OPEN-开仓，CLOSE-平仓）<br>
+f_hedgeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投保标记（SPEC-投机，HEDGE-套保，ARB-套利）<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+stkName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券名称<br>
+batchNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;批号<br>
+contractNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合同号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令数量<br>
+knockQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交数量<br>
+exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场<br>
+regId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股东代码<br>
+status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行状态<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0-完全成交<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1-部分成交<br>
+&nbsp;&nbsp;&nbsp;&nbsp;knockTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交时间&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;knockPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交价格<br>
+knockAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交金额<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstDetailOrder">class <strong>MsgQueryInstDetailOrder</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买卖反向<br>
+f_offSetFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开平标志（OPEN-开仓，CLOSE-平仓）<br>
+f_hedgeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投保标记（SPEC-投机，HEDGE-套保，ARB-套利）<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+stkName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券名称<br>
+batchNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;批号<br>
+contractNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合同号<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令数量<br>
+knockQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已成交数量<br>
+orderTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托时间<br>
+withdrawQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;撤单数量<br>
+fillStauts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令成交状态<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期货:0-全部成交，1-部分成交，2-未成交；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现货:0-完全成交,1-部分成交,2-未成交,3-撤单，4-部分撤单<br>
+knockPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交价格<br>
+knockAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交金额<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstInfo">class <strong>MsgQueryInstInfo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>instInfo</strong> = ''</dl>
+
+<dl><dt><strong>instList</strong> = ''</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstInfo_InstInfo">class <strong>MsgQueryInstInfo_InstInfo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+instructName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令名称<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托类型、回购方向、买卖方向<br>
+beginDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有效开始日期<br>
+endDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有效结束日期<br>
+offerStartTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始申报时间<br>
+offerStopTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;停止申报时间<br>
+instructStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令状态<br>
+instructDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令下达时间<br>
+optId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作柜员<br>
+riskMemo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;风险提醒备注信息<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstInfo_InstList">class <strong>MsgQueryInstInfo_InstList</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场<br>
+instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+stkName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券名称<br>
+f_offSetFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开平标志（OPEN-开仓，CLOSE-平仓）<br>
+f_hedgeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投保标记（SPEC-投机，HEDGE-套保，ARB-套利）<br>
+priceMode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格策略&nbsp;(0--固定，1--限价，2--CD，3--市场价格)<br>
+orderPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托价格<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托数量<br>
+executeQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行数量<br>
+regId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股东代码<br>
+buyAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;约用资金<br>
+traderId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易员<br>
+exchTotalKnockQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令创建时市场成交量<br>
+exchTotalKnockAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令创建时市场成交金额<br>
+numRate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量比<br>
+memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注<br>
+stopPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;止损价格<br>
+orderAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令金额<br>
+instructType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令类别（0-数量指令，1-金额指令）<br>
+executeStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行状态<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0-执行<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1-终止<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2-锁定<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3-暂停<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4-完成<br>
+rate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比率（换股指令）<br>
+fixOrderFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单标记<br>
+referencePrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参考价格<br>
+arrivedLastPx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受订单时的市场价格<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstList">class <strong>MsgQueryInstList</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令列表<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instructName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令名称<br>
+&nbsp;&nbsp;&nbsp;&nbsp;acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+&nbsp;&nbsp;&nbsp;&nbsp;orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托类型、回购方向、买卖方向<br>
+&nbsp;&nbsp;&nbsp;&nbsp;beginDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令起始日期<br>
+&nbsp;&nbsp;&nbsp;&nbsp;endDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令结束日期<br>
+&nbsp;&nbsp;&nbsp;&nbsp;offerStartTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令起始时间<br>
+&nbsp;&nbsp;&nbsp;&nbsp;offerStopTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令结束时间<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instructStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令状态<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_NotDeal&nbsp;=&nbsp;0;&nbsp;//未处理<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_Execute&nbsp;=&nbsp;1;&nbsp;//执行<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_WithDraw&nbsp;=&nbsp;2;&nbsp;//终止<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_Invalid&nbsp;=&nbsp;3;&nbsp;//失效,日终<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_Pause&nbsp;=&nbsp;4;&nbsp;//暂停<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_Finish&nbsp;=&nbsp;5;&nbsp;//完成<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_SubExecute&nbsp;=&nbsp;6;&nbsp;//部分执行<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_Uncheck&nbsp;=&nbsp;8;&nbsp;//需要复核，但尚未复核<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InstructStatus_NoPass&nbsp;=&nbsp;9;&nbsp;//复核不通过<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instructDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令下达时间<br>
+&nbsp;&nbsp;&nbsp;&nbsp;optId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作柜员<br>
+&nbsp;&nbsp;&nbsp;&nbsp;otherAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;换股指令买入额外增减资金<br>
+&nbsp;&nbsp;&nbsp;&nbsp;riskMemo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;风险提醒备注信息<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MsgQueryInstSumOrder">class <strong>MsgQueryInstSumOrder</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号<br>
+exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+regId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股东代码<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买卖反向<br>
+f_offSetFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开平标志（OPEN-开仓，CLOSE-平仓）<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托数量<br>
+knockQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交数量<br>
+orderAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托金额<br>
+knockAmt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交金额<br>
+knockAvgPx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成交均价<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaCreateInstInfo">class <strong>ParaCreateInstInfo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID<br>
+instructName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令名称<br>
+acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金账号<br>
+securityType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券类型（CS-现货，FUT-期货）<br>
+orderType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买卖方向<br>
+beginDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令起始日期（yyyy-mm-dd）<br>
+endDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令结束日期（yyyy-mm-dd）<br>
+offerStartTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令起始时间（hh:mm:ss）<br>
+offerStopTime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令结束时间（hh:mm:ss）<br>
+memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令的备注<br>
+checkFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否交易检查（0-不检查，1-检查）<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaCreateInstList">class <strong>ParaCreateInstList</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>exchId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市场<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码<br>
+regId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;股东代码<br>
+f_offSetFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开平标志（OPEN-开仓，CLOSE-平仓）<br>
+f_hedgeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投保标记（SPEC-投机，HEDGE-套保，ARB-套利）<br>
+priceMode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格策略（0--固定&nbsp;1--限价&nbsp;2--CD&nbsp;3--市场价格）<br>
+orderPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托价格<br>
+orderQty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;委托数量<br>
+traderId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易员<br>
+numRate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量比比例<br>
+memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令明细的备注<br>
+stopPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;止损价格<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaInstHandle">class <strong>ParaInstHandle</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金账号(必送)<br>
+instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID(必送)<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码(可选)<br>
+closeFlag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作类型(必送)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0-暂停<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1-中止<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2-恢复<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaQueryInstDetailKnock">class <strong>ParaQueryInstDetailKnock</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID(必送)<br>
+securityType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券类型（CS-股票，FUT-期货）<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码(可选)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaQueryInstDetailOrder">class <strong>ParaQueryInstDetailOrder</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID(必送)<br>
+securityType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券类型（CS-股票，FUT-期货）<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码(可选)<br>
+queryType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查询类型<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0-未完成<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2-全部不含撤单<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaQueryInstInfo">class <strong>ParaQueryInstInfo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID(可选必送)<br>
+securityType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券类型（CS-股票，FUT-期货）<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaQueryInstList">class <strong>ParaQueryInstList</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>acctId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资金帐号(必送)<br>
+securityType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券类型（CS-现货，FUT-期货）<br>
+instructStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令状态(可选)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParaQueryInstSumOrder">class <strong>ParaQueryInstSumOrder</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>instructId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指令ID(必送)<br>
+stkId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证券代码(可选)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-dup"><strong>dup</strong></a>(...)</dt><dd><tt><a href="#-dup">dup</a>(integer)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Duplicate&nbsp;an&nbsp;integer&nbsp;socket&nbsp;file&nbsp;descriptor.&nbsp;&nbsp;This&nbsp;is&nbsp;like&nbsp;os.<a href="#-dup">dup</a>(),&nbsp;but&nbsp;for<br>
+sockets;&nbsp;on&nbsp;some&nbsp;platforms&nbsp;os.<a href="#-dup">dup</a>()&nbsp;won't&nbsp;work&nbsp;for&nbsp;socket&nbsp;file&nbsp;descriptors.</tt></dd></dl>
+ <dl><dt><a name="-getdefaulttimeout"><strong>getdefaulttimeout</strong></a>(...)</dt><dd><tt><a href="#-getdefaulttimeout">getdefaulttimeout</a>()&nbsp;-&gt;&nbsp;timeout<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;default&nbsp;timeout&nbsp;in&nbsp;seconds&nbsp;(float)&nbsp;for&nbsp;new&nbsp;socket&nbsp;objects.<br>
+A&nbsp;value&nbsp;of&nbsp;None&nbsp;indicates&nbsp;that&nbsp;new&nbsp;socket&nbsp;objects&nbsp;have&nbsp;no&nbsp;timeout.<br>
+When&nbsp;the&nbsp;socket&nbsp;module&nbsp;is&nbsp;first&nbsp;imported,&nbsp;the&nbsp;default&nbsp;is&nbsp;None.</tt></dd></dl>
+ <dl><dt><a name="-gethostbyaddr"><strong>gethostbyaddr</strong></a>(...)</dt><dd><tt><a href="#-gethostbyaddr">gethostbyaddr</a>(host)&nbsp;-&gt;&nbsp;(name,&nbsp;aliaslist,&nbsp;addresslist)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;true&nbsp;host&nbsp;name,&nbsp;a&nbsp;list&nbsp;of&nbsp;aliases,&nbsp;and&nbsp;a&nbsp;list&nbsp;of&nbsp;IP&nbsp;addresses,<br>
+for&nbsp;a&nbsp;host.&nbsp;&nbsp;The&nbsp;host&nbsp;argument&nbsp;is&nbsp;a&nbsp;string&nbsp;giving&nbsp;a&nbsp;host&nbsp;name&nbsp;or&nbsp;IP&nbsp;number.</tt></dd></dl>
+ <dl><dt><a name="-gethostbyname"><strong>gethostbyname</strong></a>(...)</dt><dd><tt><a href="#-gethostbyname">gethostbyname</a>(host)&nbsp;-&gt;&nbsp;address<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;IP&nbsp;address&nbsp;(a&nbsp;string&nbsp;of&nbsp;the&nbsp;form&nbsp;'255.255.255.255')&nbsp;for&nbsp;a&nbsp;host.</tt></dd></dl>
+ <dl><dt><a name="-gethostbyname_ex"><strong>gethostbyname_ex</strong></a>(...)</dt><dd><tt><a href="#-gethostbyname_ex">gethostbyname_ex</a>(host)&nbsp;-&gt;&nbsp;(name,&nbsp;aliaslist,&nbsp;addresslist)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;true&nbsp;host&nbsp;name,&nbsp;a&nbsp;list&nbsp;of&nbsp;aliases,&nbsp;and&nbsp;a&nbsp;list&nbsp;of&nbsp;IP&nbsp;addresses,<br>
+for&nbsp;a&nbsp;host.&nbsp;&nbsp;The&nbsp;host&nbsp;argument&nbsp;is&nbsp;a&nbsp;string&nbsp;giving&nbsp;a&nbsp;host&nbsp;name&nbsp;or&nbsp;IP&nbsp;number.</tt></dd></dl>
+ <dl><dt><a name="-gethostname"><strong>gethostname</strong></a>(...)</dt><dd><tt><a href="#-gethostname">gethostname</a>()&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;current&nbsp;host&nbsp;name.</tt></dd></dl>
+ <dl><dt><a name="-getnameinfo"><strong>getnameinfo</strong></a>(...)</dt><dd><tt><a href="#-getnameinfo">getnameinfo</a>(sockaddr,&nbsp;flags)&nbsp;--&gt;&nbsp;(host,&nbsp;port)<br>
+&nbsp;<br>
+Get&nbsp;host&nbsp;and&nbsp;port&nbsp;for&nbsp;a&nbsp;sockaddr.</tt></dd></dl>
+ <dl><dt><a name="-getprotobyname"><strong>getprotobyname</strong></a>(...)</dt><dd><tt><a href="#-getprotobyname">getprotobyname</a>(name)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;protocol&nbsp;number&nbsp;for&nbsp;the&nbsp;named&nbsp;protocol.&nbsp;&nbsp;(Rarely&nbsp;used.)</tt></dd></dl>
+ <dl><dt><a name="-getservbyname"><strong>getservbyname</strong></a>(...)</dt><dd><tt><a href="#-getservbyname">getservbyname</a>(servicename[,&nbsp;protocolname])&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;port&nbsp;number&nbsp;from&nbsp;a&nbsp;service&nbsp;name&nbsp;and&nbsp;protocol&nbsp;name.<br>
+The&nbsp;optional&nbsp;protocol&nbsp;name,&nbsp;if&nbsp;given,&nbsp;should&nbsp;be&nbsp;'tcp'&nbsp;or&nbsp;'udp',<br>
+otherwise&nbsp;any&nbsp;protocol&nbsp;will&nbsp;match.</tt></dd></dl>
+ <dl><dt><a name="-getservbyport"><strong>getservbyport</strong></a>(...)</dt><dd><tt><a href="#-getservbyport">getservbyport</a>(port[,&nbsp;protocolname])&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;service&nbsp;name&nbsp;from&nbsp;a&nbsp;port&nbsp;number&nbsp;and&nbsp;protocol&nbsp;name.<br>
+The&nbsp;optional&nbsp;protocol&nbsp;name,&nbsp;if&nbsp;given,&nbsp;should&nbsp;be&nbsp;'tcp'&nbsp;or&nbsp;'udp',<br>
+otherwise&nbsp;any&nbsp;protocol&nbsp;will&nbsp;match.</tt></dd></dl>
+ <dl><dt><a name="-htonl"><strong>htonl</strong></a>(...)</dt><dd><tt><a href="#-htonl">htonl</a>(integer)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;32-bit&nbsp;integer&nbsp;from&nbsp;host&nbsp;to&nbsp;network&nbsp;byte&nbsp;order.</tt></dd></dl>
+ <dl><dt><a name="-htons"><strong>htons</strong></a>(...)</dt><dd><tt><a href="#-htons">htons</a>(integer)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;16-bit&nbsp;integer&nbsp;from&nbsp;host&nbsp;to&nbsp;network&nbsp;byte&nbsp;order.</tt></dd></dl>
+ <dl><dt><a name="-inet_aton"><strong>inet_aton</strong></a>(...)</dt><dd><tt><a href="#-inet_aton">inet_aton</a>(string)&nbsp;-&gt;&nbsp;bytes&nbsp;giving&nbsp;packed&nbsp;32-bit&nbsp;IP&nbsp;representation<br>
+&nbsp;<br>
+Convert&nbsp;an&nbsp;IP&nbsp;address&nbsp;in&nbsp;string&nbsp;format&nbsp;(123.45.67.89)&nbsp;to&nbsp;the&nbsp;32-bit&nbsp;packed<br>
+binary&nbsp;format&nbsp;used&nbsp;in&nbsp;low-level&nbsp;network&nbsp;functions.</tt></dd></dl>
+ <dl><dt><a name="-inet_ntoa"><strong>inet_ntoa</strong></a>(...)</dt><dd><tt><a href="#-inet_ntoa">inet_ntoa</a>(packed_ip)&nbsp;-&gt;&nbsp;ip_address_string<br>
+&nbsp;<br>
+Convert&nbsp;an&nbsp;IP&nbsp;address&nbsp;from&nbsp;32-bit&nbsp;packed&nbsp;binary&nbsp;format&nbsp;to&nbsp;string&nbsp;format</tt></dd></dl>
+ <dl><dt><a name="-inet_ntop"><strong>inet_ntop</strong></a>(...)</dt><dd><tt><a href="#-inet_ntop">inet_ntop</a>(af,&nbsp;packed_ip)&nbsp;-&gt;&nbsp;string&nbsp;formatted&nbsp;IP&nbsp;address<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;packed&nbsp;IP&nbsp;address&nbsp;of&nbsp;the&nbsp;given&nbsp;family&nbsp;to&nbsp;string&nbsp;format.</tt></dd></dl>
+ <dl><dt><a name="-inet_pton"><strong>inet_pton</strong></a>(...)</dt><dd><tt><a href="#-inet_pton">inet_pton</a>(af,&nbsp;ip)&nbsp;-&gt;&nbsp;packed&nbsp;IP&nbsp;address&nbsp;string<br>
+&nbsp;<br>
+Convert&nbsp;an&nbsp;IP&nbsp;address&nbsp;from&nbsp;string&nbsp;format&nbsp;to&nbsp;a&nbsp;packed&nbsp;string&nbsp;suitable<br>
+for&nbsp;use&nbsp;with&nbsp;low-level&nbsp;network&nbsp;functions.</tt></dd></dl>
+ <dl><dt><a name="-ntohl"><strong>ntohl</strong></a>(...)</dt><dd><tt><a href="#-ntohl">ntohl</a>(integer)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;32-bit&nbsp;integer&nbsp;from&nbsp;network&nbsp;to&nbsp;host&nbsp;byte&nbsp;order.</tt></dd></dl>
+ <dl><dt><a name="-ntohs"><strong>ntohs</strong></a>(...)</dt><dd><tt><a href="#-ntohs">ntohs</a>(integer)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;16-bit&nbsp;integer&nbsp;from&nbsp;network&nbsp;to&nbsp;host&nbsp;byte&nbsp;order.</tt></dd></dl>
+ <dl><dt><a name="-setdefaulttimeout"><strong>setdefaulttimeout</strong></a>(...)</dt><dd><tt><a href="#-setdefaulttimeout">setdefaulttimeout</a>(timeout)<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;default&nbsp;timeout&nbsp;in&nbsp;seconds&nbsp;(float)&nbsp;for&nbsp;new&nbsp;socket&nbsp;objects.<br>
+A&nbsp;value&nbsp;of&nbsp;None&nbsp;indicates&nbsp;that&nbsp;new&nbsp;socket&nbsp;objects&nbsp;have&nbsp;no&nbsp;timeout.<br>
+When&nbsp;the&nbsp;socket&nbsp;module&nbsp;is&nbsp;first&nbsp;imported,&nbsp;the&nbsp;default&nbsp;is&nbsp;None.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>AF_APPLETALK</strong> = &lt;AddressFamily.AF_APPLETALK: 16&gt;<br>
+<strong>AF_DECnet</strong> = 12<br>
+<strong>AF_INET</strong> = &lt;AddressFamily.AF_INET: 2&gt;<br>
+<strong>AF_INET6</strong> = &lt;AddressFamily.AF_INET6: 23&gt;<br>
+<strong>AF_IPX</strong> = &lt;AddressFamily.AF_IPX: 6&gt;<br>
+<strong>AF_IRDA</strong> = &lt;AddressFamily.AF_IRDA: 26&gt;<br>
+<strong>AF_SNA</strong> = &lt;AddressFamily.AF_SNA: 11&gt;<br>
+<strong>AF_UNSPEC</strong> = &lt;AddressFamily.AF_UNSPEC: 0&gt;<br>
+<strong>AI_ADDRCONFIG</strong> = &lt;AddressInfo.AI_ADDRCONFIG: 1024&gt;<br>
+<strong>AI_ALL</strong> = &lt;AddressInfo.AI_ALL: 256&gt;<br>
+<strong>AI_CANONNAME</strong> = &lt;AddressInfo.AI_CANONNAME: 2&gt;<br>
+<strong>AI_NUMERICHOST</strong> = &lt;AddressInfo.AI_NUMERICHOST: 4&gt;<br>
+<strong>AI_NUMERICSERV</strong> = &lt;AddressInfo.AI_NUMERICSERV: 8&gt;<br>
+<strong>AI_PASSIVE</strong> = &lt;AddressInfo.AI_PASSIVE: 1&gt;<br>
+<strong>AI_V4MAPPED</strong> = &lt;AddressInfo.AI_V4MAPPED: 2048&gt;<br>
+<strong>CAPI</strong> = &lt;capsule object "_socket.CAPI"&gt;<br>
+<strong>EAI_AGAIN</strong> = 11002<br>
+<strong>EAI_BADFLAGS</strong> = 10022<br>
+<strong>EAI_FAIL</strong> = 11003<br>
+<strong>EAI_FAMILY</strong> = 10047<br>
+<strong>EAI_MEMORY</strong> = 8<br>
+<strong>EAI_NODATA</strong> = 11001<br>
+<strong>EAI_NONAME</strong> = 11001<br>
+<strong>EAI_SERVICE</strong> = 10109<br>
+<strong>EAI_SOCKTYPE</strong> = 10044<br>
+<strong>INADDR_ALLHOSTS_GROUP</strong> = -536870911<br>
+<strong>INADDR_ANY</strong> = 0<br>
+<strong>INADDR_BROADCAST</strong> = -1<br>
+<strong>INADDR_LOOPBACK</strong> = 2130706433<br>
+<strong>INADDR_MAX_LOCAL_GROUP</strong> = -536870657<br>
+<strong>INADDR_NONE</strong> = -1<br>
+<strong>INADDR_UNSPEC_GROUP</strong> = -536870912<br>
+<strong>IPPORT_RESERVED</strong> = 1024<br>
+<strong>IPPORT_USERRESERVED</strong> = 5000<br>
+<strong>IPPROTO_ICMP</strong> = 1<br>
+<strong>IPPROTO_IP</strong> = 0<br>
+<strong>IPPROTO_RAW</strong> = 255<br>
+<strong>IPPROTO_TCP</strong> = 6<br>
+<strong>IPPROTO_UDP</strong> = 17<br>
+<strong>IPV6_CHECKSUM</strong> = 26<br>
+<strong>IPV6_DONTFRAG</strong> = 14<br>
+<strong>IPV6_HOPLIMIT</strong> = 21<br>
+<strong>IPV6_HOPOPTS</strong> = 1<br>
+<strong>IPV6_JOIN_GROUP</strong> = 12<br>
+<strong>IPV6_LEAVE_GROUP</strong> = 13<br>
+<strong>IPV6_MULTICAST_HOPS</strong> = 10<br>
+<strong>IPV6_MULTICAST_IF</strong> = 9<br>
+<strong>IPV6_MULTICAST_LOOP</strong> = 11<br>
+<strong>IPV6_PKTINFO</strong> = 19<br>
+<strong>IPV6_RECVRTHDR</strong> = 38<br>
+<strong>IPV6_RECVTCLASS</strong> = 40<br>
+<strong>IPV6_RTHDR</strong> = 32<br>
+<strong>IPV6_TCLASS</strong> = 39<br>
+<strong>IPV6_UNICAST_HOPS</strong> = 4<br>
+<strong>IPV6_V6ONLY</strong> = 27<br>
+<strong>IP_ADD_MEMBERSHIP</strong> = 12<br>
+<strong>IP_DROP_MEMBERSHIP</strong> = 13<br>
+<strong>IP_HDRINCL</strong> = 2<br>
+<strong>IP_MULTICAST_IF</strong> = 9<br>
+<strong>IP_MULTICAST_LOOP</strong> = 11<br>
+<strong>IP_MULTICAST_TTL</strong> = 10<br>
+<strong>IP_OPTIONS</strong> = 1<br>
+<strong>IP_RECVDSTADDR</strong> = 25<br>
+<strong>IP_TOS</strong> = 3<br>
+<strong>IP_TTL</strong> = 4<br>
+<strong>MSG_BCAST</strong> = &lt;MsgFlag.MSG_BCAST: 1024&gt;<br>
+<strong>MSG_CTRUNC</strong> = &lt;MsgFlag.MSG_CTRUNC: 512&gt;<br>
+<strong>MSG_DONTROUTE</strong> = &lt;MsgFlag.MSG_DONTROUTE: 4&gt;<br>
+<strong>MSG_MCAST</strong> = &lt;MsgFlag.MSG_MCAST: 2048&gt;<br>
+<strong>MSG_OOB</strong> = &lt;MsgFlag.MSG_OOB: 1&gt;<br>
+<strong>MSG_PEEK</strong> = &lt;MsgFlag.MSG_PEEK: 2&gt;<br>
+<strong>MSG_TRUNC</strong> = &lt;MsgFlag.MSG_TRUNC: 256&gt;<br>
+<strong>MSG_WAITALL</strong> = &lt;MsgFlag.MSG_WAITALL: 8&gt;<br>
+<strong>NI_DGRAM</strong> = 16<br>
+<strong>NI_MAXHOST</strong> = 1025<br>
+<strong>NI_MAXSERV</strong> = 32<br>
+<strong>NI_NAMEREQD</strong> = 4<br>
+<strong>NI_NOFQDN</strong> = 1<br>
+<strong>NI_NUMERICHOST</strong> = 2<br>
+<strong>NI_NUMERICSERV</strong> = 8<br>
+<strong>RCVALL_MAX</strong> = 3<br>
+<strong>RCVALL_OFF</strong> = 0<br>
+<strong>RCVALL_ON</strong> = 1<br>
+<strong>RCVALL_SOCKETLEVELONLY</strong> = 2<br>
+<strong>SHUT_RD</strong> = 0<br>
+<strong>SHUT_RDWR</strong> = 2<br>
+<strong>SHUT_WR</strong> = 1<br>
+<strong>SIO_KEEPALIVE_VALS</strong> = 2550136836<br>
+<strong>SIO_LOOPBACK_FAST_PATH</strong> = 2550136848<br>
+<strong>SIO_RCVALL</strong> = 2550136833<br>
+<strong>SOCK_DGRAM</strong> = &lt;SocketKind.SOCK_DGRAM: 2&gt;<br>
+<strong>SOCK_RAW</strong> = &lt;SocketKind.SOCK_RAW: 3&gt;<br>
+<strong>SOCK_RDM</strong> = &lt;SocketKind.SOCK_RDM: 4&gt;<br>
+<strong>SOCK_SEQPACKET</strong> = &lt;SocketKind.SOCK_SEQPACKET: 5&gt;<br>
+<strong>SOCK_STREAM</strong> = &lt;SocketKind.SOCK_STREAM: 1&gt;<br>
+<strong>SOL_IP</strong> = 0<br>
+<strong>SOL_SOCKET</strong> = 65535<br>
+<strong>SOL_TCP</strong> = 6<br>
+<strong>SOL_UDP</strong> = 17<br>
+<strong>SOMAXCONN</strong> = 2147483647<br>
+<strong>SO_ACCEPTCONN</strong> = 2<br>
+<strong>SO_BROADCAST</strong> = 32<br>
+<strong>SO_DEBUG</strong> = 1<br>
+<strong>SO_DONTROUTE</strong> = 16<br>
+<strong>SO_ERROR</strong> = 4103<br>
+<strong>SO_EXCLUSIVEADDRUSE</strong> = -5<br>
+<strong>SO_KEEPALIVE</strong> = 8<br>
+<strong>SO_LINGER</strong> = 128<br>
+<strong>SO_OOBINLINE</strong> = 256<br>
+<strong>SO_RCVBUF</strong> = 4098<br>
+<strong>SO_RCVLOWAT</strong> = 4100<br>
+<strong>SO_RCVTIMEO</strong> = 4102<br>
+<strong>SO_REUSEADDR</strong> = 4<br>
+<strong>SO_SNDBUF</strong> = 4097<br>
+<strong>SO_SNDLOWAT</strong> = 4099<br>
+<strong>SO_SNDTIMEO</strong> = 4101<br>
+<strong>SO_TYPE</strong> = 4104<br>
+<strong>SO_USELOOPBACK</strong> = 64<br>
+<strong>TCP_MAXSEG</strong> = 4<br>
+<strong>TCP_NODELAY</strong> = 1<br>
+<strong>encode</strong> = 'utf-8'<br>
+<strong>errorTab</strong> = {10004: 'The operation was interrupted.', 10009: 'A bad file handle was passed.', 10013: 'Permission denied.', 10014: 'A fault occurred on the network??', 10022: 'An invalid operation was attempted.', 10035: 'The socket operation would block', 10036: 'A blocking operation is already in progress.', 10048: 'The network address is in use.', 10054: 'The connection has been reset.', 10058: 'The network has been shut down.', ...}<br>
+<strong>has_ipv6</strong> = True<br>
+<strong>lock</strong> = &lt;unlocked _thread.lock object&gt;<br>
+<strong>sequenceManager</strong> = &lt;CTSlib.SysUtils.SequenceManager object&gt;</td></tr></table>
+</body></html>

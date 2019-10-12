@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module CTSlib.Logger</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="CTSlib.html"><font color="#ffffff">CTSlib</font></a>.Logger</strong></big></big> (version 1.01, 2017-03-10)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:e%3A%5Cpythonapi_sphinx%5Cctslib%5Clogger.py">e:\pythonapi_sphinx\ctslib\logger.py</a></font></td></tr></table>
+    <p><tt>提供&nbsp;API&nbsp;日志服务功能<br>
+日志默认输出到程序运行当前目录下的&nbsp;log&nbsp;目录，系统自动创建目录结构<br>
+日志分为四个级别进行记录，分别是&nbsp;info,&nbsp;error,&nbsp;warn,&nbsp;debug</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+<a href="traceback.html">traceback</a><br>
+</td><td width="25%" valign=top><a href="types.html">types</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-debug"><strong>debug</strong></a>(msg)</dt><dd><tt>记录调试级别日志</tt></dd></dl>
+ <dl><dt><a name="-error"><strong>error</strong></a>(msg)</dt><dd><tt>记录错误级别日志</tt></dd></dl>
+ <dl><dt><a name="-info"><strong>info</strong></a>(msg)</dt><dd><tt>记录信息级别日志</tt></dd></dl>
+ <dl><dt><a name="-setLogLevel"><strong>setLogLevel</strong></a>(level)</dt><dd><tt>设置日志记录级别<br>
+Level&nbsp;Numeric&nbsp;value&nbsp;<br>
+CRITICAL&nbsp;50&nbsp;<br>
+ERROR&nbsp;40&nbsp;<br>
+WARNING&nbsp;30&nbsp;<br>
+INFO&nbsp;20&nbsp;<br>
+DEBUG&nbsp;10&nbsp;<br>
+NOTSET&nbsp;0</tt></dd></dl>
+ <dl><dt><a name="-setLogOutputFlag"><strong>setLogOutputFlag</strong></a>(flag)</dt><dd><tt>设置打开或者关闭控制台输出日志功能</tt></dd></dl>
+ <dl><dt><a name="-setLogPath"><strong>setLogPath</strong></a>(path)</dt></dl>
+ <dl><dt><a name="-warn"><strong>warn</strong></a>(msg)</dt><dd><tt>记录警告级别日志</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>FORMAT</strong> = '%(asctime)-15s %(levelname)s -- %(message)s'<br>
+<strong>__status__</strong> = 'production'<br>
+<strong>defaultFormat</strong> = &lt;logging.Formatter object&gt;<br>
+<strong>encode</strong> = 'utf-8'<br>
+<strong>lock</strong> = &lt;unlocked _thread.lock object&gt;<br>
+<strong>logDate</strong> = '20190524'<br>
+<strong>logDebug</strong> = &lt;Logger 10 (NOTSET)&gt;<br>
+<strong>logError</strong> = &lt;Logger 40 (NOTSET)&gt;<br>
+<strong>logInfo</strong> = &lt;Logger 20 (NOTSET)&gt;<br>
+<strong>logLevelDebug</strong> = 10<br>
+<strong>logLevelError</strong> = 40<br>
+<strong>logLevelInfo</strong> = 20<br>
+<strong>logLevelWarn</strong> = 30<br>
+<strong>logPath</strong> = ''<br>
+<strong>logStream</strong> = &lt;StreamHandler &lt;stdout&gt; (NOTSET)&gt;<br>
+<strong>logWarn</strong> = &lt;Logger 30 (NOTSET)&gt;</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">GuiPei&nbsp;&lt;guipei@croot.com&gt;</td></tr></table>
+</body></html>
