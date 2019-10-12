@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="PythonAPI" default="deploy" basedir=".">
+	
+	<target name="deploy" description="deploy python API" 
+		depends="PyDoc27,Compile27, Release27,
+		PyDoc35, Compile35, Release35, PyDoc36, Compile36, Release36">
+	</target>
+	<property name="version" value="1.093" />
+	<property name="docPath" value="E:\\pythonAPI_Sphinx\\sphinx" />
+	
+	<!-- python2.7 -->
+	<!-- 设置Python解释器路径-->
+	<property name="path27" value="C:\\Python27" />
+	<property name="egg27" value="CTSlib-${version}_py27.egg" />
+	
+	<!--编译 -->
+	<target name="Compile27">
+		
+		<exec dir="." executable="${path27}\\python">
+			<arg line=" -m compileall CTSlib" />
+		</exec>
+	</target>
+	<!-- 生成文档-->
+	<target name="PyDoc27">
+		<property name="docDir" value="/doc" />
+		
+		<exec dir="./sphinx" executable="${docPath}\\make.bat">
+			<arg line="html" />
+		</exec>
+		
+		<move todir="./doc">
+			<fileset dir="./sphinx/build/html">
+			</fileset>
+		</move>
+
+	</target>
+	<!-- 打包Release-->
+	<target name="Release27">
+		<tstamp>
+			<format property="todayDate" pattern="yyyyMMdd" />
+		</tstamp>
+        <zip destfile="${egg27}" duplicate="preserve">
+        	<zipfileset dir="./CTSlib" includes="**.pyc" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfo.exe" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfoAPI.dll" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libJavaGetTerminalInfo.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libTerminalInfoAPI.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TestJavaGetTerminalInfo.so" prefix="CTSlib" />
+        </zip>
+		<zip destfile="release/RN_Python27_API_${todayDate}.zip" duplicate="preserve">
+            <zipfileset dir="./doc" includes="**/**" prefix="doc" />
+			<zipfileset dir="." includes="_sources,_static" prefix="doc" />
+            <zipfileset dir="./demo/future" includes="**.py" prefix="demo/future" />
+            <zipfileset dir="./demo/option" includes="**.py" prefix="demo/option" />
+            <zipfileset dir="./demo/stock" includes="**.py" prefix="demo/stock" />
+			<zipfileset dir="./demo/instruction" includes="**.py" excludes="DemoAlgo_KY.py" prefix="demo/instruction" />
+			<zipfileset dir="./demo/multiprocessing" includes="**.py" prefix="demo/multiprocessing" />
+			<zipfileset dir="." includes="**.py" prefix="" />
+			<zipfileset dir="." includes="${egg27}" prefix="" />
+			<zipfileset dir="." includes="api_const.txt" prefix="" />
+		</zip>
+		
+	</target>
+
+	<!-- python3.5 -->
+	<!-- 设置Python解释器路径-->
+	<property name="path35" value="C:\\Python35" />
+	<property name="egg35" value="CTSlib-${version}_py35.egg" />
+	<!--编译 -->
+	<target name="Compile35">
+		
+		<exec dir="." executable="${path35}\\python">
+			<arg line=" -m compileall -b CTSlib" />
+		</exec>
+	</target>
+	<!-- 生成文档-->
+	<target name="PyDoc35">
+		<property name="docDir" value="/doc" />
+		
+		<exec dir="./sphinx" executable="${docPath}\\make.bat">
+			<arg line="html" />
+		</exec>
+		
+		<move todir="./doc">
+			<fileset dir="./sphinx/build/html">
+			</fileset>
+		</move>
+		
+	</target>
+	<!-- 打包Release-->
+	<target name="Release35">
+		<tstamp>
+			<format property="todayDate" pattern="yyyyMMdd" />
+		</tstamp>
+        <zip destfile="${egg35}" duplicate="preserve">
+        	<zipfileset dir="./CTSlib" includes="**.pyc" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfo.exe" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfoAPI.dll" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libJavaGetTerminalInfo.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libTerminalInfoAPI.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TestJavaGetTerminalInfo.so" prefix="CTSlib" />
+        </zip>
+		<zip destfile="release/RN_Python35_API_${todayDate}.zip" duplicate="preserve">
+            <zipfileset dir="./doc" includes="**/**" prefix="doc" />
+			<zipfileset dir="." includes="_sources,_static" prefix="doc" />
+            <zipfileset dir="./demo/future" includes="**.py" prefix="demo/future" />
+            <zipfileset dir="./demo/option" includes="**.py" prefix="demo/option" />
+            <zipfileset dir="./demo/stock" includes="**.py" prefix="demo/stock" />
+			<zipfileset dir="./demo/instruction" includes="**.py" excludes="DemoAlgo_KY.py" prefix="demo/instruction" />
+			<zipfileset dir="./demo/multiprocessing" includes="**.py" prefix="demo/multiprocessing" />
+			<zipfileset dir="." includes="**.py" prefix="" />
+			<zipfileset dir="." includes="${egg35}" prefix="" />
+			<zipfileset dir="." includes="api_const.txt" prefix="" />
+		</zip>
+	</target>
+	
+	<!-- python3.6 -->
+	<!-- 设置Python解释器路径-->
+	<property name="path36" value="C:\\Python3" />
+	<property name="egg36" value="CTSlib-${version}_py36.egg" />
+	<!--编译 -->
+	<target name="Compile36">
+		
+		<exec dir="." executable="${path36}\\python">
+			<arg line=" -m compileall -b CTSlib" />
+		</exec>
+	</target>
+	<!-- 生成文档-->
+	<target name="PyDoc36">
+		<property name="docDir" value="/doc" />
+		
+		<exec dir="./sphinx" executable="${docPath}\\make.bat">
+			<arg line="html" />
+		</exec>
+		
+		<move todir="./doc">
+			<fileset dir="./sphinx/build/html">
+			</fileset>
+		</move>
+		
+	</target>
+	<!-- 打包Release-->
+	<target name="Release36">
+		<tstamp>
+			<format property="todayDate" pattern="yyyyMMdd" />
+		</tstamp>
+        <zip destfile="${egg36}" duplicate="preserve">
+        	<zipfileset dir="./CTSlib" includes="**.pyc" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfo.exe" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TerminalInfoAPI.dll" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libJavaGetTerminalInfo.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="libTerminalInfoAPI.so" prefix="CTSlib" />
+            <zipfileset dir="./CTSlib" includes="TestJavaGetTerminalInfo.so" prefix="CTSlib" />
+        </zip>
+		<zip destfile="release/RN_Python36_API_${todayDate}.zip" duplicate="preserve">
+            <zipfileset dir="./doc" includes="**/**" prefix="doc" />
+            <zipfileset dir="./demo/future" includes="**.py" prefix="demo/future" />
+            <zipfileset dir="./demo/option" includes="**.py" prefix="demo/option" />
+            <zipfileset dir="./demo/stock" includes="**.py" prefix="demo/stock" />
+			<zipfileset dir="./demo/instruction" includes="**.py" excludes="DemoAlgo_KY.py" prefix="demo/instruction" />
+			<zipfileset dir="./demo/multiprocessing" includes="**.py" prefix="demo/multiprocessing" />
+			<zipfileset dir="." includes="**.py" prefix="" />
+			<zipfileset dir="." includes="${egg36}" prefix="" />
+			<zipfileset dir="." includes="api_const.txt" prefix="" />
+		</zip>
+		
+	</target>
+
+
+</project>

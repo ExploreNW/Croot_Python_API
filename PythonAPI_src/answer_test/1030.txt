@@ -1,0 +1,28 @@
+﻿"""[
+	{"answerList":[{"answerCode":"A0334","answerContent":"女性","answerName":""}],"questionCode":"T071","questionName":"gender 性别","questionType":1},
+	
+	{"answerList":[{"answerCode":"A0335","answerContent":"45-55岁","answerName":""}],"questionCode":"T072","questionName":"age 年龄","questionType":1},
+	
+	{"answerList":[{"answerCode":"A0346","answerContent":"没有或不知道","answerName":""}],"questionCode":"T075","questionName":"normallySymptom 常见病情","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0339","answerContent":"40","answerName":"weight"},{"answerCode":"A0340","answerContent":"215","answerName":"height"}],"questionCode":"T073","questionName":"heightAndWeight","questionType":9},
+	
+	{"answerList":[{"answerCode":"A0343","answerContent":"中风","answerName":""}],"questionCode":"T074","questionName":"lifeHabit 生活习惯","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0385","answerContent":"没有或不知道"}],"questionCode":"T077","questionName":"examHistoryDiseases 家族史病情","questionType":3},
+	
+	{"answer List":[{"answer Code":"A0398","answer Content":"没有或不知道"}],"question Code":"T079","question Name":"history Diseases历史病情","question Type":3},
+	
+	{"answerList":[{"answerCode":"A0410","answerContent":"没有或不知道"}],"questionCode":"T081","questionName":"historyOperations 历史操作","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0412","answerContent":"没有或不知道"}],"questionCode":"T082","questionName":"takenDrugs 吃药、吸毒","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0431","answerContent":"没有或不知道"}],"questionCode":"T083","questionName":"recentSymptom 最近症状","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0438","answerContent":"没有或不知道"}],"questionCode":"T084","questionName":"lifeHabit 生活习惯","questionType":3},
+	
+	{"answerList":[{"answerCode":"A0440","answerContent":"否"}],"questionCode":"T085","questionName":"fracture 骨折","questionType":1},
+	
+	{"answerList":[{"answerCode":"A0445","answerContent":"没有或不知道"}],"questionCode":"T086","questionName":"specialAttention 特别关注","questionType":3}
+	
+]"""
